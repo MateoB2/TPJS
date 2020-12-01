@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <script> 
+            //fonction qui affiche la valeur
+             function afficher(val)
+            {              
+                document.getElementById("output").value+=val
+            }
+            //fonction qui efface l'écran
+            function effacer()
+            {
+                document.getElementById("output").value = "";
+            }
+            //fonction qui calcule
+            function calculer()
+            {
+                let a = document.getElementById("output").value;
+                let b = eval(a);
+                document.getElementById("output").value = b;
+            }
+            //fonction qui affiche un pop up
+            function intro()
+            {
+                alert("Bienvenue sur le site de ma calculatrice, je vous souhaite un joyeux calcul !");
+            }
+            //fonction qui modifie la couleur de fond du formulaire
+            function couleur(x) {
+                x.style.background = "#007FFF";
+            }
+        </script>
+        <style>
+            td button{width:100%} /*définit la taille des boutons*/
+        </style>
+    </head>
+    <body onload = intro()>
+        <center> <!--cette basile centre la calculatrice-->
+        <table border="1">
+            <tr> 
+                <td colspan="3"><input id="output" onfocus="couleur(this)"></td> <!--barre qui affiche le calcul dans la calculatrice-->
+                <td><button onclick="effacer()">c</button></td> <!--bouton qui permettant d'effacer l'entrée-->
+            </tr>
+            <tr> <!--Chaque bouton de la deuxième ligne de la calculatrice affiche ce qui est écrit dessus-->
+                <td><button onclick="afficher('1')">1</button></td>
+                <td><button onclick="afficher('2')">2</button></td>
+                <td><button onclick="afficher('3')">3</button></td>
+                <td><button onclick="afficher('+')">+</button></td>
+            </tr>
+            <tr> <!--Même chose que pour la ligne précèdente, tout les boutons affichent ce qui correspond-->
+                <td><button onclick="afficher('4')">4</button></td>
+                <td><button onclick="afficher('5')">5</button></td>
+                <td><button onclick="afficher('6')">6</button></td>
+                <td><button onclick="afficher('-')">-</button></td>
+            </tr>
+            <tr> <!--Même chose que pour la ligne précèdente, tout les boutons affichent ce qui correspond-->
+                <td><button onclick="afficher('7')">7</button></td>
+                <td><button onclick="afficher('8')">8</button></td>
+                <td><button onclick="afficher('9')">9</button></td>
+                <td><button onclick="afficher('*')">*</button></td>
+            </tr>
+            <tr> <!--Même chose que pour la ligne précèdente, tout les boutons affichent ce qui correspond-->
+                <td><button onclick="afficher('.')">.</button></td>
+                <td><button onclick="afficher('0')">0</button></td>
+                <td><button onclick="calculer()">=</button></td> 
+                <td><button onclick="afficher('/')">/</button></td>
+            </tr>
+        </table></center>
+    </body>
+</html>
