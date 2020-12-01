@@ -27,6 +27,11 @@
             function couleur(x) {
                 x.style.background = "#007FFF";
             }
+            //fonction qui affiche un message si on utilise une touche clavier
+            function evenement_clavier() 
+            {   
+             alert("Tu as appuyé sur une touche clavier");
+            }
         </script>
         <style>
             td button{width:100%} /*définit la taille des boutons*/
@@ -36,7 +41,7 @@
         <center> <!--cette basile centre la calculatrice-->
         <table border="1">
             <tr> 
-                <td colspan="3"><input id="output" onfocus="couleur(this)"></td> <!--barre qui affiche le calcul dans la calculatrice-->
+                <td colspan="3"><input id="output" onfocus="couleur(this)" onkeydown="evenement_clavier()"></td> <!--barre qui affiche le calcul dans la calculatrice-->
                 <td><button onclick="effacer()">c</button></td> <!--bouton qui permettant d'effacer l'entrée-->
             </tr>
             <tr> <!--Chaque bouton de la deuxième ligne de la calculatrice affiche ce qui est écrit dessus-->
