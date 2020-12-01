@@ -32,6 +32,11 @@
             {   
              alert("Tu as appuyé sur une touche clavier");
             }
+            //fonction qui modifie la couleur d'un bouton lorsqu'on le survol
+            function couleur_bouton1(x) 
+            {
+              x.style.background = "#B8D7F5";
+            }
         </script>
         <style>
             td button{width:100%} /*définit la taille des boutons*/
@@ -45,7 +50,7 @@
                 <td><button onclick="effacer()">c</button></td> <!--bouton qui permettant d'effacer l'entrée-->
             </tr>
             <tr> <!--Chaque bouton de la deuxième ligne de la calculatrice affiche ce qui est écrit dessus-->
-                <td><button onclick="afficher('1')">1</button></td>
+                <td><button onclick="afficher('1')" onmouseover="couleur_bouton1(this)">1</button></td>
                 <td><button onclick="afficher('2')">2</button></td>
                 <td><button onclick="afficher('3')">3</button></td>
                 <td><button onclick="afficher('+')">+</button></td>
